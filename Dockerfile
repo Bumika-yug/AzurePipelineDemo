@@ -15,6 +15,7 @@ COPY ["AzurePipelineDemo.csproj", "/src"]
 RUN dotnet restore "AzurePipelineDemo.csproj" 
 COPY . .
 
+
 RUN dotnet build "AzurePipelineDemo.csproj" -c Release -o /app/build
 
 FROM build AS publish
